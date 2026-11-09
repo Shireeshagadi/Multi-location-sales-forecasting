@@ -10,11 +10,11 @@ In the restaurant industry, inaccurate sales forecasting leads to severe operati
 
 **Objective:** Build a robust, scalable predictive model capable of merging disparate relational datasets to forecast daily sales per item per restaurant, capturing granular fluctuations (weekends, holidays, and temporal patterns).
 
-## 📊 Datasets Used
-The pipeline integrates and merges three distinct relational datasets to engineer powerful predictive features:
-1. `restaurants.csv`: Metadata about store locations (location ID, region, store size, type).
-2. `items.csv`: Product attributes (item ID, category, price, department).
-3. `sales.csv`: Historical transactional ledger containing daily item-level sales records per restaurant.
+## 📊 Data Schema & Dimensions
+* **Sales Ledger (`sales.csv`):** 109,600 historical transactional records capturing daily operational volumes (`date`, `item_id`, `item_count`, `price`).
+* **Menu Catalog (`items.csv`):** 100 individual items mapped to specific restaurant properties with explicit nutritional profiles (`id`, `store_id`, `name`, `kcal`, `cost`).
+* **Restaurant Profiles (`resturants.csv`):** 6 active regional commercial storefront locations (`id`, `name`).
+
 
 ## 🛠️ Technical Stack & Methodology
 * **Language:** Python
